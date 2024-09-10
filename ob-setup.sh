@@ -14,7 +14,6 @@ minikube start --cpus=4 --memory 4096 --disk-size 32g --vm-driver=docker
 
 # deploy app
 git clone https://github.com/GoogleCloudPlatform/microservices-demo.git
-cd microservices-demo
-skaffold run
+cd microservices-demo && skaffold run
 
 echo "Finished"

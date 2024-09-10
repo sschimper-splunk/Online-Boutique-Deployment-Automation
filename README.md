@@ -1,7 +1,14 @@
 # Online Boutique Deployment Automation
 
-Executing this script will automatically deploy [Google's Online Boutique microservice demo](https://github.com/GoogleCloudPlatform/microservices-demo/tree/main) to a K8s cluster, which I am sharing with you.
-To deploy it, simply follow these steps:
+The contained script aims at facilitating the deployment of [Google's Online Boutique microservice demo](https://github.com/GoogleCloudPlatform/microservices-demo/tree/main) on a Ubuntu system. The main reason of having this demo microservices demo deployed is it's feasibility as a practice and test environment for instrumentation for OpenTelemetry and Observability backends just as Splunk Observability Cloud.
+
+The script will do the following:
+- installing docker, minikube, and skaffold.
+- starting a new minikube cluster
+- fetching the Online Boutique source code from GitHub
+- Deploying the Online Boutique via skaffold
+
+To set up the enviroment with running Online Boutique, simply follow these steps:
 - Create a Nova/AWS EC2 instance with Ubuntu operating system and instance type at least m5.xlarge (4 cores are needed)
 - SSH into the instance, create an .sh file, copy the contents of the attached script to it, and make it executable with `chmod +x <filename>.sh`
 - Execute the script with `./<filename>.sh` This step might take up to 30 mins.
